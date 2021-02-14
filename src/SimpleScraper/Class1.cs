@@ -11,20 +11,6 @@ namespace SimpleScraper
         }
     }
 
-    public interface ILinkExtractor
-    {
-        public string[] Extract(string html);
-    }
-
-    public class SameDomainLinkExtractor : LinkExtractor
-    {
-        public override string[] Extract(string html)
-        {
-            var allLinks = base.Extract(html);
-            throw new NotImplementedException();
-        }
-    }
-
     public class SimpleScraper
     {
         public Dictionary<string, string[]> Scrape(string url)

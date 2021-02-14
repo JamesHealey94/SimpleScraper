@@ -7,15 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\all-links.txt" />
     <None Remove="resources\Monzo – Banking made easy.html" />
     <None Remove="resources\same-domain-links.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="resources\all-links.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="resources\Monzo – Banking made easy.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SimpleScraper
 {
@@ -8,7 +8,10 @@ namespace SimpleScraper
     {
         public virtual string[] Extract(string html)
         {
-            throw new NotImplementedException();
+            var doc = new HtmlDocument();
+            doc.LoadHtml(html);
+            var tags = ExtractAllAHrefTags(doc);
+            return tags.Distinct().OrderBy(x => x).ToArray();
         }
 
         /// <summary>
@@ -17,7 +20,7 @@ namespace SimpleScraper
         /// </summary>
         /// <param name="htmlSnippet"></param>
         /// <returns></returns>
-        private List<string> ExtractAllAHrefTags(HtmlDocument htmlSnippet)
+        private static List<string> ExtractAllAHrefTags(HtmlDocument htmlSnippet)
         {
             var hrefTags = new List<string>();
 
