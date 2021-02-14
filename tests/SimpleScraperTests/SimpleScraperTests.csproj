@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\html-agility-pack-download.cshtml" />
     <None Remove="resources\Monzo – Banking made easy.html" />
     <None Remove="resources\same-domain-links.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="resources\html-agility-pack-download.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\Monzo – Banking made easy.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

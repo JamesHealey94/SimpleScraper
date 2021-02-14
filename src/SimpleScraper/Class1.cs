@@ -3,13 +3,6 @@ using System.Collections.Generic;
 
 namespace SimpleScraper
 {
-    public class HtmlDownloader
-    {
-        public string GetHtml(string url)
-        {
-            throw new NotImplementedException();
-        }
-    }
 
     public class SimpleScraper
     {
