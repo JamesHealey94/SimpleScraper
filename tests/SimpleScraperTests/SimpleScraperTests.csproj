@@ -16,9 +16,6 @@
     <Content Include="resources\html-agility-pack-download.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\Monzo – Banking made easy.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="resources\same-domain-links.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
