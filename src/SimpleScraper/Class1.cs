@@ -1,42 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SimpleScraper
 {
     public class HtmlDownloader
     {
-        public object GetHtml(string url)
+        public string GetHtml(string url)
         {
             throw new NotImplementedException();
         }
     }
 
-    public class LinkExtractor
+    public interface ILinkExtractor
     {
-        public object Extract(string url)
-        {
-            throw new NotImplementedException();
-        }
+        public string[] Extract(string html);
     }
 
-    public class SameDomainLinkExtractor
+    public class SameDomainLinkExtractor : LinkExtractor
     {
-        public object Extract(string url)
+        public override string[] Extract(string html)
         {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class HtmlLinkExtractor
-    {
-        public object Extract(string url)
-        {
+            var allLinks = base.Extract(html);
             throw new NotImplementedException();
         }
     }
 
     public class SimpleScraper
     {
-        public object Scrape(string url)
+        public Dictionary<string, string[]> Scrape(string url)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public interface IScraperDisplayer
+    {
+        public void Scrape(Dictionary<string, string[]> scrape);
+    }
+
+    public class ConsoleScrapeDisplayer : IScraperDisplayer
+    {
+        public void Scrape(Dictionary<string, string[]> scrape)
         {
             throw new NotImplementedException();
         }
