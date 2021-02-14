@@ -1,0 +1,88 @@
+.location-banner {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.location-banner__container {
+  position: relative;
+}
+
+.location-banner__text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.location-banner__dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -12px;
+}
+
+.location-banner__dismiss img {
+  width: 16px;
+}
+
+.location-banner__dropdown {
+  width: auto;
+  background-color: transparent;
+  margin-right: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 42px;
+  vertical-align: middle;
+}
+
+.location-banner__dropdown:hover {
+  border-color: #2991cc;
+}
+
+.location-banner__confirm {
+  vertical-align: middle;
+}
+
+.location-banner * + * {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 359px) {
+  .location-banner__dropdown {
+    margin-right: 4px;
+    font-size: 0.875rem;
+  }
+
+  .location-banner .location-banner__confirm {
+    font-size: 0.875rem;
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .location-banner__text {
+    padding-right: 42px;
+  }
+
+  /**
+  * Having to fight with the specificity we get from the monzo-styleguide here
+  */
+  .location-banner .location-banner__container .grid-row > * + * {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .location-banner__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .location-banner__dismiss {
+    margin-top: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .location-banner__confirm {
+    margin-right: 16px;
+  }
+}

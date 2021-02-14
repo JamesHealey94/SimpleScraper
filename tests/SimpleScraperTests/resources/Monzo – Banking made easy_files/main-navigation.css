@@ -1,0 +1,378 @@
+@media screen and (max-width: 959px) {
+  .mobile-no-scroll {
+    overflow: hidden; } }
+
+.mobile-navigation-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 99; }
+  @media screen and (min-width: 960px) {
+    .mobile-navigation-overlay {
+      display: none; } }
+
+.mobile-navigation {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: #14233c;
+  background-image: url("https://internal-api.monzo.com/static/nav_background.png");
+  z-index: 98; }
+  @media screen and (min-width: 960px) {
+    .mobile-navigation {
+      display: none; } }
+  .mobile-navigation .mobile-navigation__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .mobile-navigation .mobile-navigation__logo {
+    width: 126px;
+    height: 28px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='311'%20height='69'%3E%3Cg%20data-name='Layer%203'%3E%3Cpath%20fill='%23e34b5f'%20d='M76%2050a4%204%200%200%201-1%202L59%2068a1%201%200%200%201-2-1V32l19-19z'/%3E%3Cpath%20fill='%23e7ce9c'%20d='M63%200a1%201%200%200%200-2%200L38%2024v27l19-19%2019-19z'/%3E%3Cpath%20fill='%231e7889'%20d='M0%2050a4%204%200%200%200%201%202l16%2016a1%201%200%200%200%202-1V32L0%2013z'/%3E%3Cpath%20fill='%2397baa6'%20d='M15%200a1%201%200%200%200-2%200L0%2013l19%2019%2019%2019V24z'/%3E%3Cpath%20fill='%23fff'%20d='M100%2050V15h9v4a10%2010%200%200%201%2010-5%2011%2011%200%200%201%209%206c4-4%207-6%2011-6%208%200%2013%204%2013%2013v23h-10V31c0-5-1-7-5-7s-6%202-6%207v19h-11V31c0-5-1-7-4-7s-6%202-6%207v19zm64-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-14%206%2017%2017%200%200%201-13-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm13%2022a9%209%200%200%200%209-9%208%208%200%201%200-17%200%209%209%200%200%200%208%209zm26%209V15h10v4c2-3%205-5%2010-5%207%200%2012%205%2012%2013v23h-10V31c0-5-1-7-5-7s-7%202-7%207v19zm76-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-13%206%2017%2017%200%200%201-14-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm14%2022a9%209%200%200%200%208-9%208%208%200%201%200-17%200%209%209%200%200%200%209%209zm-50%209v-7l14-19h-14v-9h26v8l-13%2018h13v9z'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: 100%; }
+  .mobile-navigation .mobile-navigation__toggle {
+    font-size: 1rem;
+    padding: 8px 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease-in 0s; }
+    .mobile-navigation .mobile-navigation__toggle:hover, .mobile-navigation .mobile-navigation__toggle:active, .mobile-navigation .mobile-navigation__toggle:focus {
+      color: #50b9dc; }
+      .mobile-navigation .mobile-navigation__toggle:hover svg, .mobile-navigation .mobile-navigation__toggle:active svg, .mobile-navigation .mobile-navigation__toggle:focus svg {
+        fill: #50b9dc; }
+    .mobile-navigation .mobile-navigation__toggle svg {
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: middle;
+      fill: white;
+      transition: fill 0.2s ease-in 0s; }
+    @media screen and (min-width: 960px) {
+      .mobile-navigation .mobile-navigation__toggle {
+        display: none; } }
+
+@media screen and (min-width: 960px) {
+  .rightPipeAfter, .rightPipe::after {
+    content: '';
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    height: 32px;
+    padding-top: 16px; } }
+
+.newBadge {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 4px;
+  position: absolute;
+  background-color: #a942e4;
+  background: -moz-linear-gradient(45deg, #a942e4 0%, #f61818 100%);
+  background: -webkit-linear-gradient(45deg, #a942e4 0%, #f61818 100%);
+  background: linear-gradient(45deg, #a942e4 0%, #f61818 100%); }
+
+.main-navigation {
+  display: none;
+  background-image: url("https://internal-api.monzo.com/static/nav_background.png"); }
+  @media screen and (max-width: 959px) {
+    .main-navigation.is-visible {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 414px;
+      max-width: calc(414px + 32px);
+      width: 100%;
+      width: calc(100% + 32px);
+      display: inherit;
+      box-sizing: border-box;
+      background-color: white;
+      margin-right: -32px;
+      padding-top: 1rem;
+      padding-right: 32px;
+      padding-bottom: 48px;
+      padding-left: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      z-index: 100; } }
+  @media screen and (min-width: 960px) {
+    .main-navigation {
+      position: relative;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      max-width: inherit;
+      display: inherit;
+      background-color: #14233c;
+      overflow-y: inherit;
+      z-index: 100; } }
+  @media screen and (min-width: 960px) {
+    .main-navigation .main-navigation__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  .main-navigation .main-navigation__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .main-navigation .main-navigation__logo {
+    width: 126px;
+    height: 28px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='311'%20height='69'%3E%3Cg%20data-name='Layer%203'%3E%3Cpath%20fill='%23e34b5f'%20d='M76%2050a4%204%200%200%201-1%202L59%2068a1%201%200%200%201-2-1V32l19-19z'/%3E%3Cpath%20fill='%23e7ce9c'%20d='M63%200a1%201%200%200%200-2%200L38%2024v27l19-19%2019-19z'/%3E%3Cpath%20fill='%231e7889'%20d='M0%2050a4%204%200%200%200%201%202l16%2016a1%201%200%200%200%202-1V32L0%2013z'/%3E%3Cpath%20fill='%2397baa6'%20d='M15%200a1%201%200%200%200-2%200L0%2013l19%2019%2019%2019V24z'/%3E%3Cpath%20fill='%23 14233c'%20d='M100%2050V15h9v4a10%2010%200%200%201%2010-5%2011%2011%200%200%201%209%206c4-4%207-6%2011-6%208%200%2013%204%2013%2013v23h-10V31c0-5-1-7-5-7s-6%202-6%207v19h-11V31c0-5-1-7-4-7s-6%202-6%207v19zm64-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-14%206%2017%2017%200%200%201-13-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm13%2022a9%209%200%200%200%209-9%208%208%200%201%200-17%200%209%209%200%200%200%208%209zm26%209V15h10v4c2-3%205-5%2010-5%207%200%2012%205%2012%2013v23h-10V31c0-5-1-7-5-7s-7%202-7%207v19zm76-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-13%206%2017%2017%200%200%201-14-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm14%2022a9%209%200%200%200%208-9%208%208%200%201%200-17%200%209%209%200%200%200%209%209zm-50%209v-7l14-19h-14v-9h26v8l-13%2018h13v9z'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: 100%; }
+    @media screen and (min-width: 960px) {
+      .main-navigation .main-navigation__logo {
+        margin-right: 1rem;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='311'%20height='69'%3E%3Cg%20data-name='Layer%203'%3E%3Cpath%20fill='%23e34b5f'%20d='M76%2050a4%204%200%200%201-1%202L59%2068a1%201%200%200%201-2-1V32l19-19z'/%3E%3Cpath%20fill='%23e7ce9c'%20d='M63%200a1%201%200%200%200-2%200L38%2024v27l19-19%2019-19z'/%3E%3Cpath%20fill='%231e7889'%20d='M0%2050a4%204%200%200%200%201%202l16%2016a1%201%200%200%200%202-1V32L0%2013z'/%3E%3Cpath%20fill='%2397baa6'%20d='M15%200a1%201%200%200%200-2%200L0%2013l19%2019%2019%2019V24z'/%3E%3Cpath%20fill='%23fff'%20d='M100%2050V15h9v4a10%2010%200%200%201%2010-5%2011%2011%200%200%201%209%206c4-4%207-6%2011-6%208%200%2013%204%2013%2013v23h-10V31c0-5-1-7-5-7s-6%202-6%207v19h-11V31c0-5-1-7-4-7s-6%202-6%207v19zm64-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-14%206%2017%2017%200%200%201-13-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm13%2022a9%209%200%200%200%209-9%208%208%200%201%200-17%200%209%209%200%200%200%208%209zm26%209V15h10v4c2-3%205-5%2010-5%207%200%2012%205%2012%2013v23h-10V31c0-5-1-7-5-7s-7%202-7%207v19zm76-31a19%2019%200%200%201%2032%2013%2018%2018%200%200%201-5%2013%2018%2018%200%200%201-13%206%2017%2017%200%200%201-14-6%2018%2018%200%200%201-5-13%2018%2018%200%200%201%205-13zm14%2022a9%209%200%200%200%208-9%208%208%200%201%200-17%200%209%209%200%200%200%209%209zm-50%209v-7l14-19h-14v-9h26v8l-13%2018h13v9z'/%3E%3C/g%3E%3C/svg%3E"); } }
+    @media screen and (min-width: 960px) and (max-width: 1119px) {
+      .main-navigation .main-navigation__logo {
+        width: 31px; } }
+  .main-navigation .main-navigation__toggle {
+    padding: 8px 0;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    color: #14233c;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in 0s; }
+    .main-navigation .main-navigation__toggle:hover, .main-navigation .main-navigation__toggle:active, .main-navigation .main-navigation__toggle:focus {
+      color: #50b9dc; }
+    @media screen and (min-width: 960px) {
+      .main-navigation .main-navigation__toggle {
+        display: none; } }
+  @media screen and (min-width: 960px) {
+    .main-navigation .main-navigation__links-wrapper {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: space-between;
+      padding: 0 1rem; } }
+  .main-navigation .main-navigation__links {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .main-navigation .main-navigation__links__link-toggle {
+      display: block;
+      font-size: 1rem;
+      color: #707b8c;
+      padding: 8px 0;
+      margin: 0;
+      background: transparent;
+      border: 0;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: default; }
+      .main-navigation .main-navigation__links__link-toggle:hover .main-navigation__links__link-toggle__icon, .main-navigation .main-navigation__links__link-toggle:active .main-navigation__links__link-toggle__icon, .main-navigation .main-navigation__links__link-toggle:focus .main-navigation__links__link-toggle__icon {
+        fill: #50b9dc; }
+      .main-navigation .main-navigation__links__link-toggle__icon {
+        display: none; }
+        @media screen and (min-width: 960px) {
+          .main-navigation .main-navigation__links__link-toggle__icon {
+            width: 12px;
+            height: 7px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 4px;
+            fill: white;
+            transition: fill 0.2s ease-in 0s; } }
+    .main-navigation .main-navigation__links__link {
+      display: block;
+      padding: 8px 0;
+      margin: 0;
+      background: transparent;
+      border-bottom: 1px solid rgba(195, 200, 207, 0.4);
+      color: #14233c;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease-in 0s, background-color 0.2s ease-in 0s; }
+      .main-navigation .main-navigation__links__link:hover, .main-navigation .main-navigation__links__link:active, .main-navigation .main-navigation__links__link:focus {
+        color: #50b9dc;
+        background-color: whitesmoke; }
+      .main-navigation .main-navigation__links__link--footer {
+        display: none; }
+        @media screen and (min-width: 960px) {
+          .main-navigation .main-navigation__links__link--footer {
+            display: inherit;
+            padding: 1rem 32px;
+            margin: 1rem -1rem -1rem -1rem;
+            background-color: whitesmoke;
+            border-radius: 0 0 8px 8px;
+            color: #34495e;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s ease-in 0s; }
+            .main-navigation .main-navigation__links__link--footer:hover, .main-navigation .main-navigation__links__link--footer:active, .main-navigation .main-navigation__links__link--footer:focus {
+              color: #50b9dc; } }
+      .main-navigation .main-navigation__links__link__icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px; }
+      .main-navigation .main-navigation__links__link__label {
+        display: none; }
+        @media screen and (min-width: 960px) {
+          .main-navigation .main-navigation__links__link__label {
+            background-color: #a942e4;
+            background: -moz-linear-gradient(45deg, #a942e4 0%, #f61818 100%);
+            background: -webkit-linear-gradient(45deg, #a942e4 0%, #f61818 100%);
+            background: linear-gradient(45deg, #a942e4 0%, #f61818 100%);
+            padding: 4px 8px;
+            border-radius: 18px;
+            font-size: 0.75rem;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 4px;
+            color: #fff !important;
+            line-height: 1.833; } }
+    .main-navigation .main-navigation__links__item {
+      border-left: transparent solid 0.5rem; }
+    @media screen and (min-width: 960px) {
+      .main-navigation .main-navigation__links {
+        display: flex;
+        padding: 0;
+        align-items: center; }
+        .main-navigation .main-navigation__links__item {
+          position: relative;
+          display: flex;
+          align-items: center;
+          border-bottom: transparent solid 4px;
+          border-top: transparent solid 4px;
+          border-left: none; }
+          .main-navigation .main-navigation__links__item:hover .main-navigation__links__dropdown,
+          .main-navigation .main-navigation__links__item .main-navigation__links__dropdown.is-visible {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            min-width: 332px;
+            height: auto;
+            display: block;
+            margin-left: -166px;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1); }
+            .main-navigation .main-navigation__links__item:hover .main-navigation__links__dropdown:after,
+            .main-navigation .main-navigation__links__item .main-navigation__links__dropdown.is-visible:after {
+              content: '';
+              position: absolute;
+              top: -8px;
+              left: 50%;
+              width: 24px;
+              height: 24px;
+              display: block;
+              margin-left: -12px;
+              background-color: white;
+              border-radius: 8px;
+              transform: rotate(45deg); }
+        .main-navigation .main-navigation__links__link, .main-navigation .main-navigation__links__link-toggle {
+          padding: 18px 1rem;
+          border: 0;
+          color: white;
+          font-size: 1rem;
+          transition: color 0.2s ease-in 0s, background-color 0.2s ease-in 0s; }
+          .main-navigation .main-navigation__links__link:hover, .main-navigation .main-navigation__links__link:active, .main-navigation .main-navigation__links__link:focus, .main-navigation .main-navigation__links__link-toggle:hover, .main-navigation .main-navigation__links__link-toggle:active, .main-navigation .main-navigation__links__link-toggle:focus {
+            color: #50b9dc;
+            background: none; }
+        .main-navigation .main-navigation__links__link-toggle {
+          display: flex;
+          align-items: center; } }
+    .main-navigation .main-navigation__links__dropdown {
+      margin-bottom: 24px; }
+      @media screen and (min-width: 960px) {
+        .main-navigation .main-navigation__links__dropdown {
+          display: none; }
+          .main-navigation .main-navigation__links__dropdown__item {
+            display: block; }
+          .main-navigation .main-navigation__links__dropdown .main-navigation__links__link {
+            color: #14233c;
+            font-size: 1.25rem;
+            padding: 8px 1rem; }
+            .main-navigation .main-navigation__links__dropdown .main-navigation__links__link:hover, .main-navigation .main-navigation__links__dropdown .main-navigation__links__link:active, .main-navigation .main-navigation__links__dropdown .main-navigation__links__link:focus {
+              color: #14233c;
+              background-color: whitesmoke;
+              border-radius: 4px; } }
+
+/**
+* <HACKS>
+* This is where things get hacky
+* Having to set this stuff to override styles from the monzo style framework
+*/
+.mobile-navigation,
+.main-navigation {
+  margin-top: 0; }
+  .mobile-navigation * + *,
+  .main-navigation * + * {
+    margin-top: inherit; }
+  .mobile-navigation ul,
+  .mobile-navigation li,
+  .main-navigation ul,
+  .main-navigation li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .mobile-navigation a,
+  .mobile-navigation button,
+  .main-navigation a,
+  .main-navigation button {
+    font-family: "MaisonNeue", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+.main-navigation .main-navigation__footer {
+  padding-top: 0;
+  padding-bottom: 0; }
+  @media screen and (min-width: 960px) {
+    .main-navigation .main-navigation__footer a {
+      padding: 10px 1.5rem; } }
+  .main-navigation .main-navigation__footer .o-button {
+    display: block; }
+.main-navigation__link, .main-navigation__link-toggle {
+  min-height: inherit;
+  line-height: 1.25; }
+
+/**
+* </HACKS>
+*/
+.separator {
+  margin-bottom: 0;
+  height: 2px; }
+  @media screen and (min-width: 960px) {
+    .separator {
+      display: none; } }
+
+.highlightedContext {
+  border-left: #2991cc solid 0.5rem !important; }
+  @media screen and (min-width: 960px) {
+    .highlightedContext {
+      border-bottom: #2991cc solid 4px !important;
+      border-left: none !important; } }
+
+.contextList {
+  margin-left: -2rem !important; }
+  @media screen and (min-width: 960px) {
+    .contextList {
+      margin-left: 0 !important; } }
+  .contextList li {
+    padding-left: 1rem; }
+    @media screen and (min-width: 960px) {
+      .contextList li {
+        padding-left: initial; } }
+  .contextList a {
+    border-bottom: none !important; }

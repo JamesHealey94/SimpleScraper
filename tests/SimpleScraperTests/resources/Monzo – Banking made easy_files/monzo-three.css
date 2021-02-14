@@ -1,0 +1,36 @@
+.u-font-heading {
+  font-size: 2.25rem;
+}
+
+.u-margin-top-normal {
+  margin-top: 16px;
+}
+
+picture img {
+  margin-top: 0;
+}
+
+.call-to-action {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  picture img {
+    margin-top: 68px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-action {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .u-font-heading {
+    font-size: 1.75rem;
+  }
+  .u-font-copy {
+    font-size: 1rem;
+  }
+}
