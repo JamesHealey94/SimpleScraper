@@ -10,14 +10,13 @@ namespace SimpleScraperTests
     public class Tests
     {
         private static readonly string Url = "https://monzo.com";
-        private static readonly string HomepageHtml = File.ReadAllText("resources/Monzo – Banking made easy.html");
         private static readonly string AgilityPackHtml = File.ReadAllText("resources/html-agility-pack-download.cshtml");
         private static readonly string[] MonzoLinks = File.ReadAllLines("resources/same-domain-links.txt");
 
         [TestMethod]
         public async Task Get_Html_From_UrlAsync()
         {
-            var expected = HomepageHtml;
+            var expected = AgilityPackHtml;
             var result = (await HtmlDownloader.GetHtml(Url)).Text;
             Assert.AreEqual(expected, result);
         }
