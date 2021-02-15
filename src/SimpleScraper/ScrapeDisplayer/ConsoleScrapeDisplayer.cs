@@ -7,7 +7,15 @@ namespace SimpleScraper
     {
         public void Scrape(Dictionary<string, string[]> scrape)
         {
-            throw new NotImplementedException();
+            foreach(var key in scrape.Keys)
+            {
+                Console.WriteLine(key);
+
+                foreach (var val in scrape[key])
+                {
+                    Console.WriteLine(" - " + val);
+                }
+            }
         }
     }
 }

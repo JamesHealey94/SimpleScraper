@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleScraper;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
