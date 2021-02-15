@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace SimpleScraper
 {
-    public class ConsoleScrapeDisplayer : IScraperDisplayer
+    public class ConsoleScrapeDisplayer : IScrapeDisplayer
     {
-        public void Scrape(Dictionary<string, string[]> scrape)
+        public void Display(Dictionary<string, string[]> scrape)
         {
             foreach(var key in scrape.Keys)
             {

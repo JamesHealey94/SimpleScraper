@@ -17,6 +17,7 @@ namespace SimpleScraper
 
             var doc = new HtmlWeb();
             var html = await doc.LoadFromWebAsync(url);
+
             if (html.ParseErrors.Any(e => e.Code != HtmlParseErrorCode.EndTagNotRequired))
             {
                 return null;

@@ -27,8 +27,6 @@ namespace SimpleScraper
         /// Extract all anchor tags using HtmlAgilityPack
         /// https://articles.runtings.co.uk/2009/11/easily-extracting-links-from-snippet-of.html
         /// </summary>
-        /// <param name="htmlSnippet"></param>
-        /// <returns></returns>
         private static List<string> ExtractAllAHrefTags(HtmlDocument htmlSnippet)
         {
             var hrefTags = new List<string>();

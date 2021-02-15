@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleScraper", "src\Simple
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleScraperTests", "tests\SimpleScraperTests\SimpleScraperTests.csproj", "{62C3AAFC-9189-4F0C-93BF-73E3EBA8D578}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleScraper.Runner", "src\SimpleScraper.Runner\SimpleScraper.Runner.csproj", "{A5E5B720-DFD9-44BD-8337-C94B50B8E630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62C3AAFC-9189-4F0C-93BF-73E3EBA8D578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62C3AAFC-9189-4F0C-93BF-73E3EBA8D578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62C3AAFC-9189-4F0C-93BF-73E3EBA8D578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E5B720-DFD9-44BD-8337-C94B50B8E630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E5B720-DFD9-44BD-8337-C94B50B8E630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E5B720-DFD9-44BD-8337-C94B50B8E630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E5B720-DFD9-44BD-8337-C94B50B8E630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
