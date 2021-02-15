@@ -1,14 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SimpleScraper
 {
     public class SimpleScraper
     {
-        public Dictionary<string, string[]> Scrape(string url)
+        public static async Task<Dictionary<string, string[]>> Scrape(string input)
         {
+            var UrlStandardiser = new UrlStandardiser(input);
+            var url = UrlStandardiser.Standardise(input);
 
-            throw new NotImplementedException();
+            var scrape = new Dictionary<string, string[]>();
+
+            var html = await HtmlDownloader.GetHtml(url);
+
+            var links = new SameDomainLinkExtractor(UrlStandardiser).Extract(html.Text);
+
+            scrape[url] = links;
+
+            return scrape;
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SimpleScraper
 {
     public class SameDomainLinkExtractor : LinkExtractor
     {
-        private readonly string Domain;
+        private readonly UrlStandardiser UrlStandardiser;
 
-        public SameDomainLinkExtractor(string url)
+        public SameDomainLinkExtractor(UrlStandardiser urlStandardiser)
         {
-            Domain = new Uri(url).Host;
+            UrlStandardiser = urlStandardiser;
         }
 
         public override string[] Extract(string html)
@@ -18,34 +19,16 @@ namespace SimpleScraper
             var retVals = new List<string>();
             foreach (var link in allLinks)
             {
-                if (IsRelative(link))
-                {
-                    retVals.Add(Domain + link);
-                }
-                else if (SameDomain(link))
+                if (UrlStandardiser.IsRelative(link) || UrlStandardiser.SameDomain(link))
                 {
                     retVals.Add(link);
                 }
+                else
+                {
+                    Console.WriteLine("Different domain: " + link);
+                }
             }
-            return retVals.ToArray();
-        }
-
-        private static bool IsRelative(string url)
-        {
-            return url.StartsWith("/");
-        }
-
-        private bool SameDomain(string url)
-        {
-            try
-            {
-                return Domain == new Uri(url).Host;
-            }
-            catch
-            {
-                Console.WriteLine("Invalid URL - Couldn't create URI: " + url);
-                return false;
-            }
+            return retVals.Select(UrlStandardiser.Standardise).Distinct().ToArray();
         }
     }
 }
