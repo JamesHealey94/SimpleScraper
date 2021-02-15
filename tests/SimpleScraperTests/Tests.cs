@@ -56,21 +56,10 @@ namespace SimpleScraperTests
         [TestMethod]
         public async Task Scrape_Url()
         {
-            var expected = new Dictionary<string, string[]>
-            {
-                {
-                    "wwww.monzo.com", MonzoLinks
-                },
-                {
-                    "www.monzo.com/about", new string[] { "TODO" }
-                },
-                {
-                    "www.monzo.com/blog", new string[] { "TODO" }
-                },
-                //.... TODO
-            };
+            var expected = MonzoLinks;
             var result = await SimpleScraper.SimpleScraper.Scrape(Url);
-            CollectionAssert.AreEqual(expected, result);
+            CollectionAssert.AreEqual(expected, result[Url]);
+            Assert.AreEqual(41, result.Keys.Count);
         }
     }
 }

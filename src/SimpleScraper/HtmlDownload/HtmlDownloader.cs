@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SimpleScraper
@@ -7,9 +9,22 @@ namespace SimpleScraper
     {
         public static async Task<HtmlDocument> GetHtml(string url)
         {
-            // TODO - deal with failures - .pdf url
+            if (url.EndsWith(".pdf"))
+            {
+                Console.WriteLine("URL is a PDF: " + url);
+                return null;
+            }
+
             var doc = new HtmlWeb();
-            return await doc.LoadFromWebAsync(url);
+            var html = await doc.LoadFromWebAsync(url);
+            if (html.ParseErrors.Any(e => e.Code != HtmlParseErrorCode.EndTagNotRequired))
+            {
+                return null;
+            }
+            else
+            {
+                return html;
+            }
         }
     }
 }

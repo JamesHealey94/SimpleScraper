@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,9 +10,17 @@ namespace SimpleScraper
         public virtual string[] Extract(string html)
         {
             var doc = new HtmlDocument();
-            doc.LoadHtml(html);
-            var tags = ExtractAllAHrefTags(doc);
-            return tags.Distinct().OrderBy(x => x).ToArray();
+            try
+            {
+                doc.LoadHtml(html);
+                var tags = ExtractAllAHrefTags(doc);
+                return tags.Distinct().OrderBy(x => x).ToArray();
+            }
+            catch
+            {
+                Console.WriteLine("Page is not valid HTML: " + html);
+                return null;
+            }
         }
 
         /// <summary>

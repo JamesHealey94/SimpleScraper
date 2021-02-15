@@ -45,12 +45,20 @@ namespace SimpleScraper
 
         public bool IsRelative(string url)
         {
-            return url.StartsWith("/") || url == "#";
+            return url.StartsWith("/") || url.StartsWith("#") || url.StartsWith(".");
         }
 
-        public bool SameDomain(string url)
+        public bool SameDomain(string input)
         {
-            return Domain == new Uri(url).Host;
+            try
+            {
+                return Domain == new Uri(input).Host;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid URL - Couldn't create URI: " + input);
+                return false;
+            }
         }
     }
 }
